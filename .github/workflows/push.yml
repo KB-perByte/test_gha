@@ -11,16 +11,16 @@ concurrency:
   cancel-in-progress: true
 
 on: # yamllint disable-line rule:truthy
-  push:
-    # branches to consider in the event; optional, defaults to all
-    branches:
-      - main
-      - "releases/**"
-      - "stable/**"
-    # Prevent a 2nd run after the changelog is updated
-    paths-ignore:
-      - CHANGELOG.rst
-      - changelogs/changelog.yaml
+  # push:
+  #   # branches to consider in the event; optional, defaults to all
+  #   branches:
+  #     - main
+  #     - "releases/**"
+  #     - "stable/**"
+  #   # Prevent a 2nd run after the changelog is updated
+  #   paths-ignore:
+  #     - CHANGELOG.rst
+  #     - changelogs/changelog.yaml
   workflow_dispatch:
 
 env:
@@ -32,6 +32,6 @@ jobs:
   update_release_draft:
     uses: KB-perByte/hold_gha/.github/workflows/push_network.yml@main
     with:
-      repo: ansible-collections/nothing.anything
+      repo: KB-perByte/test_gha
     secrets:
       BOT_PAT: ${{ secrets.BOT_PAT }}
