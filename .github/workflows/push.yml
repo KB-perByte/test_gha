@@ -13,6 +13,5 @@ on: # yamllint disable-line rule:truthy
     - cron: "0 0 * * *"
 
 jobs:
-  steps:
-    - name: Test monolithic
-      uses: KB-perByte/hold_gha@main
+  test_monolithic:
+    uses: KB-perByte/hold_gha@main
