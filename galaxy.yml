@@ -6,7 +6,7 @@ dependencies:
 license_file: LICENSE
 name: test
 namespace: test
-description: test.
+description: test des.
 readme: README.md
 repository: https://github.com/test-collections/test.test
 issues: https://github.com/test-collections/test.test/issues
