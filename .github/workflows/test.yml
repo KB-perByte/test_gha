@@ -17,5 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
+
       - name: Run ansible-lint
+        uses: KB-perByte/ansible-content-action@main
+
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
+
+      - name: Run sanity
         uses: KB-perByte/ansible-content-action@main
