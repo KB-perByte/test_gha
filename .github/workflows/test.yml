@@ -13,5 +13,9 @@ on: # yamllint disable-line rule:truthy
   #   - cron: "0 0 * * *"
 
 jobs:
-  test_monolithic:
-    uses: KB-perByte/ansible-content-action@main
+  ansible-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
+      - name: Run ansible-lint
+        uses: KB-perByte/ansible-content-action@main
