@@ -10,5 +10,5 @@ description: test.
 readme: README.md
 repository: https://github.com/test-collections/test.test
 issues: https://github.com/test-collections/test.test/issues
-tags: [tests, test, testing, tested]
+tags: [application, tests, test, testing, tested]
 version: "1.0.0"
