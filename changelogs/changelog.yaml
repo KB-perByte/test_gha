@@ -1,0 +1,32 @@
+ancestor: null
+releases:
+  1.0.0:
+    changes:
+      minor_changes:
+        - Support deploy_collection action.
+      release_summary:
+        Release 1.0.0 with support for health checks and collector
+        setup.
+    fragments:
+      - basic.yaml
+      - deploy_collector.yaml
+      - release_summary.yaml
+      - update_tests.yaml
+      - updates.yaml
+    plugins:
+      filter:
+        - description:
+            Generate the filtered health check dict based on the provided
+            target.
+          name: health_check_view
+          namespace: null
+    release_date: "2023-07-07"
+  1.0.1:
+    changes:
+      doc_changes:
+        - Update badges to refer to proper Github repository.
+        - Update installation process in README.
+    fragments:
+      - badge_update.yml
+      - doc_remove_git_install.yml
+    release_date: "2023-08-09"
