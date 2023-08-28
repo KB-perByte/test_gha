@@ -14,4 +14,4 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
   test_monolithic:
-    uses: KB-perByte/hold_gha@main
+    uses: KB-perByte/ansible-content-action@main
