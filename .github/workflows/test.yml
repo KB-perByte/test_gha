@@ -43,10 +43,85 @@ jobs:
           - "3.9"
           - "3.10"
           - "3.11"
-        exclude: ${{ fromJSON(inputs.matrix_exclude) }}
-        include: ${{ fromJSON(inputs.matrix_include) }}
+        matrix_exclude: >-
+          [
+            {
+              "ansible-version": "stable-2.9",
+              "python-version": "3.9"
+            },
+            {
+              "ansible-version": "stable-2.9",
+              "python-version": "3.10"
+            },
+            {
+              "ansible-version": "stable-2.9",
+              "python-version": "3.11"
+            },
+            {
+              "ansible-version": "stable-2.13",
+              "python-version": "3.7"
+            },
+            {
+              "ansible-version": "stable-2.13",
+              "python-version": "3.11"
+            },
+            {
+              "ansible-version": "stable-2.14",
+              "python-version": "3.7"
+            },
+            {
+              "ansible-version": "stable-2.14",
+              "python-version": "3.8"
+            },
+            {
+              "ansible-version": "stable-2.15",
+              "python-version": "3.7"
+            },
+            {
+              "ansible-version": "stable-2.15",
+              "python-version": "3.8"
+            },
+            {
+              "ansible-version": "milestone",
+              "python-version": "3.7"
+            },
+            {
+              "ansible-version": "milestone",
+              "python-version": "3.8"
+            },
+            {
+              "ansible-version": "milestone",
+              "python-version": "3.9"
+            },
+            {
+              "ansible-version": "devel",
+              "python-version": "3.7"
+            },
+            {
+              "ansible-version": "devel",
+              "python-version": "3.8"
+            },
+            {
+              "ansible-version": "devel",
+              "python-version": "3.9"
+            }
+          ]
+        matrix_include: >-
+          [
+            {
+              "os": "ubuntu-20.04",
+              "ansible-version": "stable-2.9",
+              "python-version": "3.6"
+            },
+          ]
+        unstable: >-
+          [
+            "devel",
+          ]
+        exclude: ${{ fromJSON(matrix.matrix_exclude) }}
+        include: ${{ fromJSON(matrix.matrix_include) }}
     runs-on: ${{ matrix.os }}
-    continue-on-error: ${{ contains(fromJSON(inputs.unstable), matrix.ansible-version) }}
+    continue-on-error: ${{ contains(fromJSON(matrix.unstable), matrix.ansible-version) }}
     steps:
       - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
 
