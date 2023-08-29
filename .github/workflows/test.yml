@@ -43,7 +43,7 @@ jobs:
           - "3.9"
           - "3.10"
           - "3.11"
-        matrix_exclude:
+        exclude:
           - ansible-version: "stable-2.9"
             python-version: '3.9'
           - ansible-version: "stable-2.9"
@@ -74,15 +74,12 @@ jobs:
             python-version: '3.8'
           - ansible-version: "devel"
             python-version: '3.9'
-        matrix_include:
+        include:
           - ansible-version: "stable-2.9"
             python-version: '3.6'
             os: "ubuntu-20.04"
         unstable:
           - "devel"
-
-        exclude: ${{ matrix.matrix_exclude }}
-        include: ${{ matrix.matrix_include }}
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ contains(matrix.unstable, matrix.ansible-version) }}
     steps:
