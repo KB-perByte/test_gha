@@ -22,9 +22,33 @@ jobs:
         uses: KB-perByte/ansible-content-action@main
 
   sanity:
-    runs-on: ubuntu-latest
+    env:
+      PY_COLORS: "1"
+      source_directory: "./source"
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+        ansible-version:
+          - stable-2.9
+          - stable-2.13
+          - stable-2.14
+          - stable-2.15
+          - milestone
+          - devel
+        python-version:
+          - "3.7"
+          - "3.8"
+          - "3.9"
+          - "3.10"
+          - "3.11"
+        exclude: ${{ fromJSON(inputs.matrix_exclude) }}
+        include: ${{ fromJSON(inputs.matrix_include) }}
+    runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ contains(fromJSON(inputs.unstable), matrix.ansible-version) }}
     steps:
       - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
 
-      - name: Run sanity
+      - name: "py${{ matrix.python-version }} / ${{ matrix.os }} / ${{ matrix.ansible-version }}"
         uses: KB-perByte/ansible-content-action@main
