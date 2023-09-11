@@ -7,3 +7,4 @@
     resources:
       - acl_interfaces
       - acls
+      - thanos
