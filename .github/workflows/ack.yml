@@ -12,4 +12,4 @@ on:  # yamllint disable-line rule:truthy
 
 jobs:
   ack:
-    uses: NilashishC/devtools/.github/workflows/ack.yml@main
+    uses: KB-perByte/devtools/.github/workflows/ack.yml@main
