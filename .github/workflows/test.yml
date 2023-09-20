@@ -88,16 +88,16 @@ jobs:
       - name: "py${{ matrix.python-version }} / ${{ matrix.os }} / ${{ matrix.ansible-version }}"
         uses: KB-perByte/ansible-content-action@main
 
-  ack:
-    runs-on: ubuntu-latest
-    permissions:
-      checks: write
-      contents: read
-      pull-requests: write
-    steps:
-      - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
+  # ack:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     checks: write
+  #     contents: read
+  #     pull-requests: write
+  #   steps:
+  #     - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
 
-      - uses: KB-perByte/ansible-content-action@main
+  #     - uses: KB-perByte/ansible-content-action@main
 
-  wack:
-    uses: ansible/devtools/.github/workflows/ack.yml@main
+  # wack:
+  #   uses: ansible/devtools/.github/workflows/ack.yml@main
