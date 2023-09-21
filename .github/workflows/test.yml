@@ -21,6 +21,14 @@ jobs:
       - name: Run ansible-lint
         uses: KB-perByte/ansible-content-action@main
 
+  tox:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
+
+      - name: Run ansible-lint
+        uses: KB-perByte/ansible-content-action@main
+
   sanity:
     env:
       PY_COLORS: "1"
@@ -38,7 +46,7 @@ jobs:
           - milestone
           - devel
         python-version:
-          # - "3.7"
+          - "3.7"
           - "3.8"
           - "3.9"
           - "3.10"
@@ -82,6 +90,7 @@ jobs:
           - "devel"
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ contains(matrix.unstable, matrix.ansible-version) }}
+
     steps:
       - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
 
