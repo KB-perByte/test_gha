@@ -14,13 +14,16 @@ DOCUMENTATION = """
         health_facts:
             description: Specify the health check dictionary.
             type: dict
+        test_facts:
+            description: Test Facts
+            type: dict
 """
 
 EXAMPLES = r"""
 # ACLs configuration in device
 
 # Router#sh access-lists
-# Standard IP access list 2
+# Standard IP access list 3
 #     30 permit 172.16.1.11
 #     20 permit 172.16.1.10
 #     10 permit 172.16.1.2
