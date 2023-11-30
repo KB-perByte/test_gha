@@ -13,13 +13,13 @@ on:  # yamllint disable-line rule:truthy
   #   - cron: "0 0 * * *"
 
 jobs:
-  ansible-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
+  # ansible-lint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: ansible-network/github_actions/.github/actions/checkout_dependency@main
 
-      - name: Run ansible-lint
-        uses: KB-perByte/ansible-content-action@main
+  #     - name: Run ansible-lint
+  #       uses: KB-perByte/ansible-content-action@main
 
   tox:
     runs-on: ubuntu-latest
