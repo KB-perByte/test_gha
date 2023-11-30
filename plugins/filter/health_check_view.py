@@ -80,7 +80,7 @@ EXAMPLES = r"""
 # GigabitEthernet3.100 is administratively down, line protocol is down
 #   Internet protocol processing disabled
 # GigabitEthernet4 is administratively down, line protocol is down
-#   Internet protocol processing disabled
+#   Internet protocol psrocessing disabled
 # Loopback999 is administratively down, line protocol is down
 #   Internet protocol processing disabled
 # Port-channel10 is down, line protocol is down
