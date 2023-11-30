@@ -68,7 +68,7 @@ EXAMPLES = r"""
 #   Helper address is not set
 #   Directed broadcast forwarding is disabled
 #   Outgoing Common access list is not set
-#   Outgoing access list is test
+#   Outgoing access list is testw
 #   Inbound Common access list is not set
 #   Inbound  access list is acl_123
 #   Proxy ARP is enabled
