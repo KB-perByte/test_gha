@@ -1,7 +1,0 @@
----
-- name: Gather resource facts for health check
-  junipernetworks.junos.junos_facts:
-    gather_network_resources:
-      - acl_interfaces
-      - acls
-  register: acls_health

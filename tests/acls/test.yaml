@@ -1,6 +1,0 @@
----
-- name: Test IOS network.acls
-  hosts: ios
-  gather_facts: false
-  roles:
-    - tests

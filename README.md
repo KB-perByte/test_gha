@@ -1,4 +1,1 @@
-# test_gha
-
-test all collection GHA emulate collections 
-WIP
+Test collection
