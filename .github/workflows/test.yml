@@ -28,7 +28,7 @@ jobs:
     uses: ansible/ansible-github-actions/.github/workflows/sanity.yaml@main
 
   unit-job:
-    uses: ansible/ansible-github-actions/.github/workflows/sanity.yaml@main
+    uses: ansible/ansible-github-actions/.github/workflows/unit.yaml@main
 
   # sanity:
   #   env:
