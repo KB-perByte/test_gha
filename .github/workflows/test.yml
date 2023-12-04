@@ -9,21 +9,15 @@ on:  # yamllint disable-line rule:truthy
   pull_request:
     branches: [main]
   workflow_dispatch:
-  # schedule:
-  #   - cron: "0 0 * * *"
 
 jobs:
   changelog:
     uses: ansible/ansible-github-actions/.github/workflows/changelog.yaml@main
-
   ansible-lint:
     uses: ansible/ansible-github-actions/.github/workflows/lint.yaml@main
-
   sanity:
     uses: ansible/ansible-github-actions/.github/workflows/sanity.yaml@main
-
   unit:
     uses: ansible/ansible-github-actions/.github/workflows/unit.yaml@main
-
   integration:
     uses: ansible/ansible-github-actions/.github/workflows/integration.yaml@main
