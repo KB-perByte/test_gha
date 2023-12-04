@@ -22,11 +22,13 @@ jobs:
   #       uses: ansible/ansible-github-actions@main
 
   ansible-lint-job:
-    uses: ansible/ansible-github-actions/.github/workflows/ansible-lint.yaml@main
+    uses: ansible/ansible-github-actions/.github/workflows/lint.yaml@main
 
   sanity-job:
-    uses: ansible/ansible-github-actions/.github/workflows/ansible-sanity.yaml@main
+    uses: ansible/ansible-github-actions/.github/workflows/sanity.yaml@main
 
+  unit-job:
+    uses: ansible/ansible-github-actions/.github/workflows/sanity.yaml@main
 
   # sanity:
   #   env:
