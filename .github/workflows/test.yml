@@ -1,5 +1,5 @@
 ---
-name: test_mono
+name: Ci
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
@@ -16,14 +16,14 @@ jobs:
   changelog:
     uses: ansible/ansible-github-actions/.github/workflows/changelog.yaml@main
 
-  ansible-lint-job:
+  ansible-lint:
     uses: ansible/ansible-github-actions/.github/workflows/lint.yaml@main
 
-  sanity-job:
+  sanity:
     uses: ansible/ansible-github-actions/.github/workflows/sanity.yaml@main
 
-  unit-job:
+  unit:
     uses: ansible/ansible-github-actions/.github/workflows/unit.yaml@main
 
-  integration-job:
+  integration:
     uses: ansible/ansible-github-actions/.github/workflows/integration.yaml@main
