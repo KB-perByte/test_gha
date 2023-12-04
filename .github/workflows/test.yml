@@ -22,10 +22,7 @@ jobs:
   #       uses: ansible/ansible-github-actions@main
 
   ansible-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run ansible-lint
-        uses: ansible/ansible-github-actions/.github/workflows/ansible-lint@main
+    uses: ansible/ansible-github-actions/.github/workflows/ansible-lint@main
 
   # sanity:
   #   env:
