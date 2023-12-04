@@ -21,7 +21,7 @@ jobs:
   #     - name: Run ansible-lint
   #       uses: ansible/ansible-github-actions@main
 
-  ansible-lint:
+  ansible-lint-job:
     uses: ansible/ansible-github-actions/.github/workflows/ansible-lint.yaml@main
 
   # sanity:
