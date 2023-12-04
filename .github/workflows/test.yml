@@ -24,6 +24,10 @@ jobs:
   ansible-lint-job:
     uses: ansible/ansible-github-actions/.github/workflows/ansible-lint.yaml@main
 
+  sanity-job:
+    uses: ansible/ansible-github-actions/.github/workflows/ansible-sanity.yaml@main
+
+
   # sanity:
   #   env:
   #     PY_COLORS: "1"
