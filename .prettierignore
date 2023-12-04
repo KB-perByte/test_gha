@@ -1,5 +1,6 @@
 # Stuff we don't want priettier to ever to look into
 .*/
+coverage/
 
 # Environments
 .env
@@ -11,16 +12,8 @@ env.bak/
 venv.bak/
 
 # A linked collection directory created by pytest-ansible-units
-
 collections/
-
-# ansible-test sanity output locally
 
 tests/output/
 
-# Tracked but not manually edited
-
-# Tracked but manually formatted
-
-# WIP
 README.md
